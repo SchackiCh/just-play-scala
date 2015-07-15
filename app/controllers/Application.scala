@@ -15,12 +15,12 @@ object Application extends Controller {
 
   class Item(var id: String, var value: String) {
     override def toString =
-      s"id: $id, value: $value"
+      s"id:$id, value:$value"
   }
   object Item
 
   class Items(var allItems: Seq[Item]){
-    override def toString = (for (v <- allItems) yield v.id + ": " + v.value).toString()
+    override def toString = (for (v <- allItems) yield sys.props("line.separator") + v.id + ": " + v.value).toString()
   }
   object Items {
 
@@ -30,6 +30,29 @@ object Application extends Controller {
       new Items(allItems)
     }
   }
+
+  class Itemset(var id: String, var items: Seq[Item]) {
+    override def toString =
+      s"id: $id, item: $items.toString()"
+  }
+  object Itemset
+
+  class Itemsets(var itemsets: Seq[Itemset]){
+    override def toString = (for (is <- itemsets) yield sys.props("line.separator") + "ItemSetId:" + is.id + ": " + {
+      for(item <- is.items) yield item.toString()
+    }).toString()
+  }
+  object Itemsets {
+
+    // convert XML to an Item object
+    def fromEntireXml(node: scala.xml.Node):Itemsets = {
+      val itemsets = (node \\ "PMML" \\ "AssociationModel" \\ "Itemset" )
+        .map( x => new Itemset((x \\ "@id").toString(),(x \\ "ItemRef")
+        .map(i => new Item(Items.fromEntireXml(node).allItems.filter(_.id =="2").head.value , (x \\ "@itemRef").toString()))))
+      new Itemsets(itemsets)
+    }
+  }
+
 
   case class SearchParameter(id: Int, name: String)
     
@@ -45,7 +68,7 @@ object Application extends Controller {
         
         //val json = Json.toJson(searchParameters)
         //Ok(json)
-        val rules = scala.xml.XML.loadFile("C:/Windows/Temp/Rules.xml")
+        val rawXml = scala.xml.XML.loadFile("C:/Windows/Temp/Rules.xml")
         
         // find what i want
         //var items: List[String] = List("apples", "oranges", "pears")
@@ -96,12 +119,14 @@ object Application extends Controller {
       //val result =(for (v <- value) yield v.head.toString() + ": " + v(1).toString()).toString()
 
      //val result = new Item("3", "juhu test")
-      val result = Items.fromEntireXml(rules)
+      val result = Items.fromEntireXml(rawXml)
       Ok(result.toString)
   }
 
   def itemsets = Action {
-    Ok("TODO")
+    val rawXml = scala.xml.XML.loadFile("C:/Windows/Temp/Rules.xml")
+    val result = Itemsets.fromEntireXml(rawXml)
+    Ok(result.toString)
   }
 
   def rules = Action {
