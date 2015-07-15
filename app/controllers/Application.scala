@@ -31,15 +31,15 @@ object Application extends Controller {
     }
   }
 
-  class Itemset(var id: String, var items: Seq[Item]) {
+  class Itemset(var id: String, var itemRefs: Seq[String]) {
     override def toString =
-      s"id: $id, item: $items.toString()"
+      s"id: $id, itemRefs: $itemRefs.toString()"
   }
   object Itemset
 
   class Itemsets(var itemsets: Seq[Itemset]){
     override def toString = (for (is <- itemsets) yield sys.props("line.separator") + "ItemSetId:" + is.id + ": " + {
-      for(item <- is.items) yield item.toString()
+      for(itemRef <- is.itemRefs) yield itemRef.toString()
     }).toString()
   }
   object Itemsets {
@@ -47,8 +47,7 @@ object Application extends Controller {
     // convert XML to an Item object
     def fromEntireXml(node: scala.xml.Node):Itemsets = {
       val itemsets = (node \\ "PMML" \\ "AssociationModel" \\ "Itemset" )
-        .map( x => new Itemset((x \\ "@id").toString(),(x \\ "ItemRef")
-        .map(i => new Item(Items.fromEntireXml(node).allItems.filter(_.id =="2").head.value , (x \\ "@itemRef").toString()))))
+        .map( x => new Itemset((x \\ "@id").toString(),(x \\ "ItemRef").map(iref =>(x \\ "@itemRef").toString())))
       new Itemsets(itemsets)
     }
   }
@@ -68,7 +67,7 @@ object Application extends Controller {
         
         //val json = Json.toJson(searchParameters)
         //Ok(json)
-        val rawXml = scala.xml.XML.loadFile("C:/Windows/Temp/Rules.xml")
+        val rawXml = scala.xml.XML.loadFile("C:/github/just-play-scala/app/assets/Rules.xml")
         
         // find what i want
         //var items: List[String] = List("apples", "oranges", "pears")
@@ -124,7 +123,7 @@ object Application extends Controller {
   }
 
   def itemsets = Action {
-    val rawXml = scala.xml.XML.loadFile("C:/Windows/Temp/Rules.xml")
+    val rawXml = scala.xml.XML.loadFile("C:/github/just-play-scala/app/assets/Rules.xml")
     val result = Itemsets.fromEntireXml(rawXml)
     Ok(result.toString)
   }
