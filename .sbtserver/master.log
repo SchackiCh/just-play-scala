@@ -1,0 +1,1059 @@
+New log file opened at Wed Jul 15 13:54:35 CEST 2015 by 6532@ISATVIEWW026
+jvm 6532@ISATVIEWW026
+jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.25-b02
+jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
+jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
+Starting event engine
+Starting sbt command engine
+Waiting for sbt command engine
+Command engine arguments=List()
+Command engine baseDirectory=C:\github\just-play-scala
+Command engine initial remaining commands List(--initialize, onFailure load-failed, boot, server-send-ready-for-request, server-handle-next-server-request)
+> --initialize
+> initialize
+> onFailure load-failed
+> boot
+> reload
+[Loading] Scanning directory C:\github\just-play-scala\project
+[Loading] Found non-root projects 
+[Loading] Done in C:\github\just-play-scala\project, returning: ()
+deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))))
+  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.JUnitXmlReportPlugin)
+sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin) not found List(sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin) not found List(sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin) not found List(sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin) not found List()
+  :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+[Loading] Done in C:\github\just-play-scala\project, returning: (just-play-scala-build)
+Loading project definition from C:\github\just-play-scala\project
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@301b2245, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+[Loading] Scanning directory C:\github\just-play-scala
+[Loading] Found root project root w/ remaining 
+deducing auto plugins based on known facts Set(Atom(play.PlayScala), Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(play.Play))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(play.Play),Set(Atom(com.typesafe.sbt.webdriver.SbtWebDriver))), Clause(Atom(play.Play),Set(Atom(play.twirl.sbt.SbtTwirl))), Clause(Atom(play.Play),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(play.PlayJava),Set(Atom(play.Play))), Clause(Atom(play.PlayScala),Set(Atom(play.Play))), Clause(Atom(play.twirl.sbt.SbtTwirl),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.webdriver.SbtWebDriver),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(sbt.plugins.BackgroundRunPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(And(Set(Atom(sbt.plugins.BackgroundRunPlugin), Atom(play.Play), Atom(sbt.plugins.SerializersPlugin))),Set(Atom(play.sbt.forkrun.PlayForkRun))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.webdriver.SbtWebDriver))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.InteractionServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SendEventServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SerializersPlugin)))))
+  :: deduced result: Matched(sbt.plugins.CorePlugin,play.PlayScala,sbt.plugins.InteractionServicePlugin,sbt.plugins.SendEventServicePlugin,play.Play,sbt.plugins.SerializersPlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,com.typesafe.sbt.jse.SbtJsTask,play.twirl.sbt.SbtTwirl,com.typesafe.sbt.webdriver.SbtWebDriver,sbt.plugins.BackgroundRunPlugin,sbt.plugins.JUnitXmlReportPlugin,com.typesafe.sbt.web.SbtWeb,com.typesafe.sbt.jse.SbtJsEngine,play.sbt.forkrun.PlayForkRun)
+sorting: ns: List(sbt.plugins.CorePlugin, play.PlayScala, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, play.Play, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, com.typesafe.sbt.webdriver.SbtWebDriver, sbt.plugins.BackgroundRunPlugin, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.jse.SbtJsEngine, play.sbt.forkrun.PlayForkRun)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb) not found List(play.PlayScala, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, play.Play, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, com.typesafe.sbt.webdriver.SbtWebDriver, sbt.plugins.BackgroundRunPlugin, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.jse.SbtJsEngine, play.sbt.forkrun.PlayForkRun)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine) not found List(play.PlayScala, play.Play, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, sbt.plugins.BackgroundRunPlugin, sbt.plugins.JUnitXmlReportPlugin, play.sbt.forkrun.PlayForkRun)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask) not found List(play.PlayScala, play.Play, play.twirl.sbt.SbtTwirl, sbt.plugins.BackgroundRunPlugin, sbt.plugins.JUnitXmlReportPlugin, play.sbt.forkrun.PlayForkRun)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, sbt.plugins.BackgroundRunPlugin, sbt.plugins.JUnitXmlReportPlugin) not found List(play.PlayScala, play.Play, play.sbt.forkrun.PlayForkRun)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, sbt.plugins.BackgroundRunPlugin, sbt.plugins.JUnitXmlReportPlugin, play.Play) not found List(play.PlayScala, play.sbt.forkrun.PlayForkRun)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, sbt.plugins.BackgroundRunPlugin, sbt.plugins.JUnitXmlReportPlugin, play.Play, play.PlayScala, play.sbt.forkrun.PlayForkRun) not found List()
+  :: sorted deduced result: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, sbt.plugins.BackgroundRunPlugin, sbt.plugins.JUnitXmlReportPlugin, play.Play, play.PlayScala, play.sbt.forkrun.PlayForkRun)
+[Loading] Done in C:\github\just-play-scala, returning: (root)
+Set current project to just-play-scala (in build file:/C:/github/just-play-scala/)
+Reapplying settings...
+Set current project to just-play-scala (in build file:/C:/github/just-play-scala/)
+> iflast shell
+> server-send-ready-for-request
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@1778f816, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed 15.07.2015 13:54:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@57990de8, check cycles: false
+Total time: 0 s, completed 15.07.2015 13:54:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@384dfe59, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 15.07.2015 13:54:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@63eda1f0, check cycles: false
+Total time: 0 s, completed 15.07.2015 13:54:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@1d33e123, check cycles: false
+Total time: 0 s, completed 15.07.2015 13:54:46
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@47d35be5, check cycles: false
+Total time: 0 s, completed 15.07.2015 13:54:48
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@2493334a, check cycles: false
+Total time: 0 s, completed 15.07.2015 13:54:48
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@12a8fe0d, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\github\just-play-scala\conf\application.conf,C:\github\just-play-scala\target\scala-2.10\classes\application.conf)
+	(C:\github\just-play-scala\conf\routes,C:\github\just-play-scala\target\scala-2.10\classes\routes)
+Total time: 0 s, completed 15.07.2015 13:54:50
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@771d014b, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 47177885, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Scala compilation took 4.767665935 s
+Java compilation took 0.641670676 s
+Java analysis took 0.006940626 s
+Java compile + analysis took 0.657292667 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 6 s, completed 15.07.2015 14:00:45
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@4fc05a32, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\github\just-play-scala\conf\application.conf,C:\github\just-play-scala\target\scala-2.10\classes\application.conf)
+	(C:\github\just-play-scala\conf\routes,C:\github\just-play-scala\target\scala-2.10\classes\routes)
+Total time: 0 s, completed 15.07.2015 14:00:45
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@45645012, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 4f25c2b9, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets            controllers.Application.itemsets
+GET     /itemsets            controllers.Application.itemsets
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets            controllers.Application.itemsets
+GET     /itemsets            controllers.Application.itemsets
+Read from stdout: four errors found
+four errors found
+Compilation failed (CompilerInterface)
+Read from stdout: (compile:compileIncremental) Compilation failed
+(compile:compileIncremental) Compilation failed
+Total time: 1 s, completed 15.07.2015 14:03:22
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@69e600f4, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 7fa02cf4, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets            controllers.Application.itemsets
+GET     /itemsets            controllers.Application.itemsets
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets            controllers.Application.itemsets
+GET     /itemsets            controllers.Application.itemsets
+Read from stdout: four errors found
+four errors found
+Compilation failed (CompilerInterface)
+Total time: 1 s, completed 15.07.2015 14:03:23
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@24d23411, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 742ed647, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets            controllers.Application.itemsets
+GET     /itemsets            controllers.Application.itemsets
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets            controllers.Application.itemsets
+GET     /itemsets            controllers.Application.itemsets
+Read from stdout: four errors found
+four errors found
+Compilation failed (CompilerInterface)
+Total time: 1 s, completed 15.07.2015 14:03:29
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@28b583f0, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 2fd6f155, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets            controllers.Application.itemsets
+GET     /itemsets            controllers.Application.itemsets
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets            controllers.Application.itemsets
+GET     /itemsets            controllers.Application.itemsets
+Read from stdout: four errors found
+four errors found
+Compilation failed (CompilerInterface)
+Total time: 1 s, completed 15.07.2015 14:03:32
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@4c0291ab, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 35bb2c4d, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets            controllers.Application.itemsets
+GET     /itemsets            controllers.Application.itemsets
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets            controllers.Application.itemsets
+GET     /itemsets            controllers.Application.itemsets
+Read from stdout: four errors found
+four errors found
+Compilation failed (CompilerInterface)
+Total time: 1 s, completed 15.07.2015 14:03:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@1e4c812d, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 400c1cfd, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets            controllers.Application.itemsets
+GET     /itemsets            controllers.Application.itemsets
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets            controllers.Application.itemsets
+GET     /itemsets            controllers.Application.itemsets
+Read from stdout: four errors found
+four errors found
+Compilation failed (CompilerInterface)
+Total time: 1 s, completed 15.07.2015 14:03:58
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@6cd8057c, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 3a6af801, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets                   controllers.Application.itemsets
+GET     /itemsets                   controllers.Application.itemsets
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets                   controllers.Application.itemsets
+GET     /itemsets                   controllers.Application.itemsets
+Read from stdout: four errors found
+four errors found
+Compilation failed (CompilerInterface)
+Total time: 1 s, completed 15.07.2015 14:05:09
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@1dc1858, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 284a8446, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets                   controllers.Application.itemsets
+GET     /itemsets                   controllers.Application.itemsets
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:9: value itemsets is not a member of object controllers.Application
+Read from stdout: GET     /itemsets                   controllers.Application.itemsets
+GET     /itemsets                   controllers.Application.itemsets
+Read from stdout: four errors found
+four errors found
+Compilation failed (CompilerInterface)
+Read from stdout: (compile:compileIncremental) Compilation failed
+(compile:compileIncremental) Compilation failed
+Total time: 1 s, completed 15.07.2015 14:05:10
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@15b38d6f, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 14f8a79a, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Read from stdout: C:\github\just-play-scala\app\controllers\Application.scala:104: Cannot write an instance of Unit to HTTP response. Try to define a Writeable[Unit]
+C:\github\just-play-scala\app\controllers\Application.scala:104: Cannot write an instance of Unit to HTTP response. Try to define a Writeable[Unit]
+Read from stdout: Ok()
+    Ok()
+Read from stdout: ^
+      ^
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: three errors found
+three errors found
+Compilation failed (CompilerInterface)
+Read from stdout: (compile:compileIncremental) Compilation failed
+(compile:compileIncremental) Compilation failed
+Total time: 1 s, completed 15.07.2015 14:05:57
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@766bee94, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 55226cf1, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Read from stdout: C:\github\just-play-scala\app\controllers\Application.scala:104: Cannot write an instance of Unit to HTTP response. Try to define a Writeable[Unit]
+C:\github\just-play-scala\app\controllers\Application.scala:104: Cannot write an instance of Unit to HTTP response. Try to define a Writeable[Unit]
+Read from stdout: Ok()
+    Ok()
+Read from stdout: ^
+      ^
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: three errors found
+three errors found
+Compilation failed (CompilerInterface)
+Total time: 1 s, completed 15.07.2015 14:05:58
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@7008afe7, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 6cf589f4, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: two errors found
+two errors found
+Compilation failed (CompilerInterface)
+Read from stdout: (compile:compileIncremental) Compilation failed
+(compile:compileIncremental) Compilation failed
+Total time: 1 s, completed 15.07.2015 14:06:06
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@440688d7, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 5f1d7ce3, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+C:\github\just-play-scala\conf\routes:8: value rules is not a member of object controllers.Application
+Read from stdout: GET     /rules                      controllers.Application.rules
+GET     /rules                      controllers.Application.rules
+Read from stdout: two errors found
+two errors found
+Compilation failed (CompilerInterface)
+Total time: 1 s, completed 15.07.2015 14:06:07
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@6fdd9bb6, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala, C:\github\just-play-scala\app\controllers\Application.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala, C:\github\just-play-scala\target\scala-2.10\src_managed\main\controllers\routes.java)
+
+Recompiling all 5 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 4 Scala sources and 1 Java source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 4eda8a32, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Scala compilation took 1.858201342 s
+Java compilation took 0.649271135 s
+Java analysis took 0.002583794 s
+Java compile + analysis took 0.659106454 s
+Invalidating C:\github\just-play-scala\app\controllers\Application.scala...
+Invalidating (transitively) by inheritance from C:\github\just-play-scala\app\controllers\Application.scala...
+Initial set of included nodes: Set(C:\github\just-play-scala\app\controllers\Application.scala)
+Invalidated by transitive inheritance dependency: Set(C:\github\just-play-scala\app\controllers\Application.scala)
+The C:\github\just-play-scala\app\controllers\Application.scala source file has the following regular definitions changed:
+	itemsets, listSearchParameters, rules, items.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala: Set(itemsets, rules, items)
+The following modified names cause invalidation of C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala: Set(itemsets, rules, items)
+Invalidating C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala...
+Invalidating (transitively) by inheritance from C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala...
+Initial set of included nodes: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala)
+Invalidated by transitive inheritance dependency: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala)
+The C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala source file has the following regular definitions changed:
+	itemsets, rules, items, listSearchParameters.
+All member reference dependencies will be considered within this context.
+New invalidations:
+	Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala)
+Initial set of included nodes: Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala)
+Including C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala by C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_routing.scala
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set(C:\github\just-play-scala\target\scala-2.10\src_managed\main\routes_reverseRouting.scala)
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\github\just-play-scala\conf\application.conf,C:\github\just-play-scala\target\scala-2.10\classes\application.conf)
+	(C:\github\just-play-scala\conf\routes,C:\github\just-play-scala\target\scala-2.10\classes\routes)
+Total time: 3 s, completed 15.07.2015 14:06:22
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@240ffe92, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 15.07.2015 14:06:23
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/github/just-play-scala/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@54c93c78, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\github\just-play-scala\conf\application.conf,C:\github\just-play-scala\target\scala-2.10\classes\application.conf)
+	(C:\github\just-play-scala\conf\routes,C:\github\just-play-scala\target\scala-2.10\classes\routes)
+Total time: 0 s, completed 15.07.2015 14:06:28
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@50571d8e, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\github\just-play-scala\app\controllers\Application.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\github\just-play-scala\app\controllers\Application.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\github\just-play-scala\app\controllers\Application.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\github\just-play-scala\target\scala-2.10\classes...
+Compiling 1 Scala source to C:\github\just-play-scala\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.4
+Getting compiler-interface from component compiler for Scala 2.10.4
+Running cached compiler 7fc20b01, interfacing (CompilerInterface) with Scala compiler version 2.10.4
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Progra~1\Java\jre1.8.0_25\lib\resources.jar;C:\Progra~1\Java\jre1.8.0_25\lib\rt.jar;C:\Progra~1\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jsse.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jce.jar;C:\Progra~1\Java\jre1.8.0_25\lib\charsets.jar;C:\Progra~1\Java\jre1.8.0_25\lib\jfr.jar;C:\Progra~1\Java\jre1.8.0_25\classes;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-library.jar
+	-classpath
+	C:\github\just-play-scala\target\scala-2.10\classes;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\twirl-api_2.10\1.0.2\jars\twirl-api_2.10.jar;C:\Users\CSchackerl\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.3.8.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\build-link\2.3.8\jars\build-link.jar;C:\typesafe-activator-1.3.5\activator-dist-1.3.5\repository\com.typesafe.play\play-exceptions\2.3.8\jars\play-exceptions.jar;C:\Users\CSchackerl\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\org.scala-stm\scala-stm_2.10\jars\scala-stm_2.10-0.7.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.3.8.jar;C:\Users\CSchackerl\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\CSchackerl\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\CSchackerl\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\CSchackerl\.sbt\boot\scala-2.10.4\lib\scala-reflect.jar;C:\Users\CSchackerl\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.4.jar;C:\Users\CSchackerl\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\CSchackerl\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\CSchackerl\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\CSchackerl\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar
+Scala compilation took 1.404407481 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 2 s, completed 15.07.2015 14:07:05
+> server-post-command-cleanup
+> server-handle-next-server-request
