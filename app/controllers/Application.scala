@@ -46,7 +46,7 @@ object Application extends Controller {
     }).toString()
 
     //def getItemsetIds(itemIds: Seq[Int]):Seq[Int] = (itemsets.filter(is => itemIds.toSet.subsetOf(is.itemIds.toSet)).map(_.id))
-    def getItemsetIds(itemIds: Seq[Int]):Seq[Int] = (itemsets.filter(is => itemIds forall (is.itemIds contains)).map(_.id))
+    def getItemsetIds(itemIds: Seq[Int]):Seq[Int] = (itemsets.filter(_.itemIds == itemIds).map(_.id))
     //def getItemsetIds(itemIds: Seq[Int]):Seq[Int] = itemsets.map(_.id)
   }
   object Itemsets {
