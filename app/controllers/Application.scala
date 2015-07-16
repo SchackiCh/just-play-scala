@@ -9,6 +9,7 @@ import scala.xml.XML
 object Application extends Controller {
   val sourceXml : String = new java.io.File(".").getCanonicalPath() + "/app/assets/Rules.xml"  //"C:/github/just-play-scala/app/assets/Rules.xml"
   val rawXml = scala.xml.XML.loadFile(sourceXml)
+  val sourceItems: Items = Items.fromEntireXml(rawXml)
 
   class Rule(var id: Integer, var value: String) {
     override def toString =
@@ -22,17 +23,17 @@ object Application extends Controller {
   }
   object Item
 
-  class Items(var allItems: Seq[Item]){
+  class Items(val allItems: Seq[Item]){
     override def toString = (for (v <- allItems) yield sys.props("line.separator") + v.id + ": " + v.value).toString()
+    //def getItemIds(values: ListBuffer[String]):Seq[Char] = allItems.filter(i => values.filter(p => i.value == p).length > 0).flatMap(_.id)
+    def getItemIds(values: ListBuffer[String]):Seq[String] = allItems.filter(i => values.exists(p => i.value == p)).map(_.id)
   }
   object Items {
-
     // convert XML to an Item object
     def fromEntireXml(node: scala.xml.Node):Items = {
       val allItems = (node \\ "PMML" \\ "AssociationModel" \\ "Item" ).map( x => new Item((x \\ "@id").toString(),(x \ "@value").toString()))
       new Items(allItems)
     }
-
   }
 
   class Itemset(var id: String, var itemRefs: Seq[String]) {
@@ -122,8 +123,8 @@ object Application extends Controller {
       //val result =(for (v <- value) yield v.head.toString() + ": " + v(1).toString()).toString()
 
       //val result = new Item("3", "juhu test")
-      val result = Items.fromEntireXml(rawXml)
-      Ok(result.toString)
+      //val result = Items.fromEntireXml(rawXml)
+      Ok(sourceItems.toString)
   }
 
   def itemsets = Action {
@@ -149,9 +150,15 @@ object Application extends Controller {
     }
 
     //find items and get there ids
+    val itemIds = sourceItems.getItemIds(input)
+
+
     //find itemsets with this parameters
     //find rules and get the consequent
     //get items from itemsets and return it
-    Ok(input.toString())
+
+    //return result
+    Ok(itemIds.toString)
+    //Ok(input.toString)
   }
 }
