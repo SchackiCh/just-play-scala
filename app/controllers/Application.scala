@@ -3,9 +3,12 @@ package controllers
 import play.api.mvc._
 import play.api.libs.json._
 import java.io._
+import scala.collection.mutable.ListBuffer
 import scala.xml.XML
 
 object Application extends Controller {
+  val sourceXml : String = new java.io.File(".").getCanonicalPath() + "/app/assets/Rules.xml"  //"C:/github/just-play-scala/app/assets/Rules.xml"
+  val rawXml = scala.xml.XML.loadFile(sourceXml)
 
   class Rule(var id: Integer, var value: String) {
     override def toString =
@@ -29,6 +32,7 @@ object Application extends Controller {
       val allItems = (node \\ "PMML" \\ "AssociationModel" \\ "Item" ).map( x => new Item((x \\ "@id").toString(),(x \ "@value").toString()))
       new Items(allItems)
     }
+
   }
 
   class Itemset(var id: String, var itemRefs: Seq[String]) {
@@ -67,7 +71,7 @@ object Application extends Controller {
         
         //val json = Json.toJson(searchParameters)
         //Ok(json)
-        val rawXml = scala.xml.XML.loadFile("C:/github/just-play-scala/app/assets/Rules.xml")
+        //val rawXml = scala.xml.XML.loadFile(sourceXml)
         
         // find what i want
         //var items: List[String] = List("apples", "oranges", "pears")
@@ -117,23 +121,37 @@ object Application extends Controller {
       //var value = (rules \\ "PMML" \\ "AssociationModel" \\ "Item" ).map( x => List((x \\ "@id"),(x \ "@value")))
       //val result =(for (v <- value) yield v.head.toString() + ": " + v(1).toString()).toString()
 
-     //val result = new Item("3", "juhu test")
+      //val result = new Item("3", "juhu test")
       val result = Items.fromEntireXml(rawXml)
       Ok(result.toString)
   }
 
   def itemsets = Action {
-    val rawXml = scala.xml.XML.loadFile("C:/github/just-play-scala/app/assets/Rules.xml")
+    //val rawXml = scala.xml.XML.loadFile(sourceXml)
     val result = Itemsets.fromEntireXml(rawXml)
     Ok(result.toString)
   }
 
-  def rules = Action {
-    Ok("TODO")
-  }
+  def rules = TODO
 
   def index = Action {
     Ok(views.html.main())
   }
 
+  def getNewSearch(hasTerrace: Boolean, hasLift: Boolean) = Action {
+    //map parameters to item values/ids
+    val input: ListBuffer[String] = ListBuffer()
+    if(hasTerrace) {
+      input += "Terrasse=terrasse:ja"
+    }
+    if(hasLift) {
+      input += "Lift=lift:ja"
+    }
+
+    //find items and get there ids
+    //find itemsets with this parameters
+    //find rules and get the consequent
+    //get items from itemsets and return it
+    Ok(input.toString())
+  }
 }
