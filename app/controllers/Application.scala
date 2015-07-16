@@ -11,12 +11,28 @@ object Application extends Controller {
   val rawXml = scala.xml.XML.loadFile(sourceXml)
   val sourceItems: Items = Items.fromEntireXml(rawXml)
   val sourceItemsets: Itemsets = Itemsets.fromEntireXml(rawXml)
+  val sourceAssociationRules: AssociationRules = AssociationRules.fromEntireXml(rawXml)
 
-  class Rule(var id: Int, var value: String) {
-    override def toString =
-      s"id: $id, value: $value"
+  class AssociationRule(support: Double, confidence: Double, lift: Double, antecedent: Int, consequent: Int) {
+    override def toString =  s"AssociationRule ... support: $support, confidence: $confidence, lift: $lift, antecedent: $antecedent, consequent: $consequent"
   }
-  object Rule
+  object AssociationRule
+
+  class AssociationRules(rules: Seq[AssociationRule]) {
+    override def toString = rules.map(sys.props("line.separator") + _.toString).toString
+    }
+
+  object AssociationRules {
+    def fromEntireXml(node: scala.xml.Node): AssociationRules = {
+      val associationRules = (node \\ "PMML" \\ "AssociationModel" \\ "AssociationRule")
+        .map(x => new AssociationRule((x \ "@support").toString.toDouble,
+            (x \ "@confidence").toString.toDouble,
+            (x \ "@lift").toString.toDouble,
+            (x \ "@antecedent").toString.toInt,
+            (x \ "@consequent").toString.toInt))
+      new AssociationRules(associationRules)
+    }
+  }
 
   class Item(var id: Int, var value: String) {
     override def toString = s"id:$id, value:$value"
@@ -24,7 +40,7 @@ object Application extends Controller {
   object Item
 
   class Items(val allItems: Seq[Item]){
-    override def toString = (for (v <- allItems) yield sys.props("line.separator") + v.id + ": " + v.value).toString()
+    override def toString = (for (v <- allItems) yield sys.props("line.separator") + v.toString).toString()
     def getItemIds(values: ListBuffer[String]):Seq[Int] = allItems.filter(i => values.exists(p => i.value == p)).map(_.id)
   }
   object Items {
@@ -61,7 +77,7 @@ object Application extends Controller {
 
   def items = Action { Ok(sourceItems.toString)  }
   def itemsets = Action {  Ok(sourceItemsets.toString) }
-  def rules = TODO
+  def rules = Action {  Ok(sourceAssociationRules.toString) }
 
   def index = Action {
     Ok(views.html.main())
