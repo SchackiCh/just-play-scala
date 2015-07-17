@@ -13,23 +13,26 @@ object Application extends Controller {
   val sourceItemsets: Itemsets = Itemsets.fromEntireXml(rawXml)
   val sourceAssociationRules: AssociationRules = AssociationRules.fromEntireXml(rawXml)
 
-  class AssociationRule(support: Double, confidence: Double, lift: Double, antecedent: Int, consequent: Int) {
+  class AssociationRule(val support: Double, val confidence: Double, val lift: Double, val antecedent: Int, val consequent: Int) {
     override def toString =  s"AssociationRule ... support: $support, confidence: $confidence, lift: $lift, antecedent: $antecedent, consequent: $consequent"
   }
   object AssociationRule
 
-  class AssociationRules(rules: Seq[AssociationRule]) {
+  class AssociationRules(val rules: Seq[AssociationRule]) {
     override def toString = rules.map(sys.props("line.separator") + _.toString).toString
+    def getMatchingRules(itemsetIds: Seq[Int]):Seq[AssociationRule] = rules.filter(r => itemsetIds.contains(r.antecedent))
     }
 
   object AssociationRules {
     def fromEntireXml(node: scala.xml.Node): AssociationRules = {
       val associationRules = (node \\ "PMML" \\ "AssociationModel" \\ "AssociationRule")
-        .map(x => new AssociationRule((x \ "@support").toString.toDouble,
+        .map(x => new AssociationRule(
+            (x \ "@support").toString.toDouble,
             (x \ "@confidence").toString.toDouble,
             (x \ "@lift").toString.toDouble,
             (x \ "@antecedent").toString.toInt,
-            (x \ "@consequent").toString.toInt))
+            (x \ "@consequent").toString.toInt)
+        )
       new AssociationRules(associationRules)
     }
   }
@@ -42,6 +45,7 @@ object Application extends Controller {
   class Items(val allItems: Seq[Item]){
     override def toString = (for (v <- allItems) yield sys.props("line.separator") + v.toString).toString()
     def getItemIds(values: ListBuffer[String]):Seq[Int] = allItems.filter(i => values.exists(p => i.value == p)).map(_.id)
+    def getItemValues(itemIds: Seq[Int]): Seq[String] = allItems.filter(i => itemIds.contains(i.id)).map(_.value)
   }
   object Items {
     // convert XML to an Item object
@@ -52,7 +56,7 @@ object Application extends Controller {
   }
 
   class Itemset(var id: Int, var itemIds: Seq[Int]) {
-    override def toString = s"id: $id, itemRefs: $itemsets.toString()"
+    override def toString = s"id: $id, itemRefs:" + itemIds
   }
   object Itemset
 
@@ -61,9 +65,8 @@ object Application extends Controller {
       for(itemId <- is.itemIds) yield itemId.toString()
     }).toString()
 
-    //def getItemsetIds(itemIds: Seq[Int]):Seq[Int] = (itemsets.filter(is => itemIds.toSet.subsetOf(is.itemIds.toSet)).map(_.id))
     def getItemsetIds(itemIds: Seq[Int]):Seq[Int] = (itemsets.filter(_.itemIds == itemIds).map(_.id))
-    //def getItemsetIds(itemIds: Seq[Int]):Seq[Int] = itemsets.map(_.id)
+    def getItemsetByItemsetId(itemsetId: Int):Itemset = itemsets.filter(_.id == itemsetId).head
   }
   object Itemsets {
 
@@ -93,13 +96,29 @@ object Application extends Controller {
     //find items and get there ids
     val itemIds = sourceItems.getItemIds(input)
 
-    //find itemsets with this parameters
+    //find itemsetIds with this parameters
     val itemsetIds = sourceItemsets.getItemsetIds(itemIds)
+
     //find rules and get the consequent
-    //get items from itemsets and return it
+    val matchingRules = sourceAssociationRules.getMatchingRules(itemsetIds)
+
+    //choose the most suitable itemset/rule
+    val sortedrules = matchingRules.sortBy(r => (r.lift, r.confidence, r.support))
+    if(sortedrules.andThen())
+      Ok("Sorry, there are no matching rules!")
+
+    val bestrule = sortedrules.head
+    val resultItemsetId = bestrule.consequent
+
+    //get itemset by itemsetId
+    val resultItemset: Itemset = sourceItemsets.getItemsetByItemsetId(resultItemsetId)
+
+    //get item values
+    val values = sourceItems.getItemValues(resultItemset.itemIds)
 
     //return result
-    Ok(itemsetIds.toString)
+    //Ok(itemsetIds.toString + sys.props("line.separator") + sys.props("line.separator") + sys.props("line.separator") + matchingRules.toString)
     //Ok(input.toString)
+    Ok(values.toString)
   }
 }
