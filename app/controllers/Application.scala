@@ -86,12 +86,15 @@ object Application extends Controller {
     Ok(views.html.main())
   }
 
-  def getNewSearch(hasTerrace: Boolean, hasLift: Boolean) = Action {
+  def getNewSearch(terrasse: Boolean, balkon: Boolean, dachgeschoss: Boolean,garage: Boolean, lift: Boolean, rank: Option[Int]) = Action {
     //map parameters to item values/ids
     val input: ListBuffer[String] = ListBuffer()
-    if(hasTerrace) input += "Terrasse=terrasse:ja"
-    if(hasLift)  input += "Lift=lift:ja"
-
+    if (terrasse) input += "Terrasse=1"
+    if (balkon) input += "Balkon=1"
+    if (dachgeschoss) input += "Dachgeschoss=1"
+    if (lift) input += "Lift=1"
+      input+="Preis_Bis_Cluster_1300-1800=1"
+        //<Item id="14" value="Preis_Bis_Cluster_von1800=1"/>
 
     //find items and get there ids
     val itemIds = sourceItems.getItemIds(input)
@@ -101,24 +104,23 @@ object Application extends Controller {
 
     //find rules and get the consequent
     val matchingRules = sourceAssociationRules.getMatchingRules(itemsetIds)
+    if(matchingRules.length > 0) {
+      //choose the most suitable itemset/rule
+      val sortedrules = matchingRules.sortBy(r => (r.lift, r.confidence, r.support))
 
-    //choose the most suitable itemset/rule
-    val sortedrules = matchingRules.sortBy(r => (r.lift, r.confidence, r.support))
-    if(sortedrules.andThen())
+      val bestrule = if(rank == Option(null)) sortedrules.head else sortedrules(rank.get-1)
+
+      val resultItemsetId = bestrule.consequent
+
+      //get itemset by itemsetId
+      val resultItemset: Itemset = sourceItemsets.getItemsetByItemsetId(resultItemsetId)
+
+      //get item values
+      val values = sourceItems.getItemValues(resultItemset.itemIds)
+
+      Ok(values.toString)
+    }
+    else
       Ok("Sorry, there are no matching rules!")
-
-    val bestrule = sortedrules.head
-    val resultItemsetId = bestrule.consequent
-
-    //get itemset by itemsetId
-    val resultItemset: Itemset = sourceItemsets.getItemsetByItemsetId(resultItemsetId)
-
-    //get item values
-    val values = sourceItems.getItemValues(resultItemset.itemIds)
-
-    //return result
-    //Ok(itemsetIds.toString + sys.props("line.separator") + sys.props("line.separator") + sys.props("line.separator") + matchingRules.toString)
-    //Ok(input.toString)
-    Ok(values.toString)
   }
 }
