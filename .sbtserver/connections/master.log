@@ -1,10 +1,22 @@
-New log file opened at Mon Jul 20 11:46:42 CEST 2015 by 14832@ISATVIEWW026
-Taking next connection to: 56779
-New client attempting to connect on port: 56780-56779
-  Address = /10.100.252.35:56779
-This client on port 56780 has uuid 28cc9f5c-f481-4836-875e-45e70349fbbd configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-28cc9f5c-f481-4836-875e-45e70349fbbd
-Taking next connection to: 56779
+New log file opened at Mon Jul 20 13:03:32 CEST 2015 by 6996@ISATVIEWW026
+Taking next connection to: 58159
+New client attempting to connect on port: 58160-58159
+  Address = /10.100.252.35:58159
+This client on port 58160 has uuid f01973cc-f7cf-4edc-af87-5fbf5493447c configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-f01973cc-f7cf-4edc-af87-5fbf5493447c
+Taking next connection to: 58159
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 56779
+Taking next connection to: 58159
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58159
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58159
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58159
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58159
