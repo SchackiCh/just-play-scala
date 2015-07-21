@@ -8,7 +8,7 @@ import scala.xml.XML
 
 object Application extends Controller {
   //val sourceXml : String = new java.io.File(".").getCanonicalPath() + "/app/assets/Rules.xml"  //"C:/github/just-play-scala/app/assets/Rules.xml"
-  val sourceXml : String = "public/assets/Rules.xml"  //"C:/github/just-play-scala/app/assets/Rules.xml"
+  val sourceXml : String = "public/Rules.xml"  //"C:/github/just-play-scala/app/assets/Rules.xml"
   val rawXml = scala.xml.XML.loadFile(sourceXml)
   val sourceItems: Items = Items.fromEntireXml(rawXml)
   val sourceItemsets: Itemsets = Itemsets.fromEntireXml(rawXml)
