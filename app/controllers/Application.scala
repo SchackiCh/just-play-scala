@@ -1,10 +1,8 @@
 package controllers
 
+import models.Items
 import play.api.mvc._
-import play.api.libs.json._
-import java.io._
 import scala.collection.mutable.ListBuffer
-import scala.xml.XML
 
 object Application extends Controller {
   //val sourceXml : String = new java.io.File(".").getCanonicalPath() + "/app/assets/Rules.xml"  //"C:/github/just-play-scala/app/assets/Rules.xml"
@@ -35,24 +33,6 @@ object Application extends Controller {
             (x \ "@consequent").toString.toInt)
         )
       new AssociationRules(associationRules)
-    }
-  }
-
-  class Item(var id: Int, var value: String) {
-    override def toString = s"id:$id, value:$value"
-  }
-  object Item
-
-  class Items(val allItems: Seq[Item]){
-    override def toString = (for (v <- allItems) yield sys.props("line.separator") + v.toString).toString()
-    def getItemIds(values: ListBuffer[String]):Seq[Int] = allItems.filter(i => values.exists(p => i.value == p)).map(_.id)
-    def getItemValues(itemIds: Seq[Int]): Seq[String] = allItems.filter(i => itemIds.contains(i.id)).map(_.value)
-  }
-  object Items {
-    // convert XML to an Item object
-    def fromEntireXml(node: scala.xml.Node):Items = {
-      val allItems = (node \\ "PMML" \\ "AssociationModel" \\ "Item" ).map( x => new Item((x \\ "@id").toString.toInt,(x \ "@value").toString()))
-      new Items(allItems)
     }
   }
 

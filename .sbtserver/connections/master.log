@@ -1,10 +1,7 @@
-New log file opened at Tue Jul 21 14:25:51 CEST 2015 by 13504@ISATVIEWW026
-Taking next connection to: 53117
-New client attempting to connect on port: 53118-53117
-  Address = /10.100.252.35:53117
-This client on port 53118 has uuid fb540b7c-d8d6-48f1-befc-14412a4292dd configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-fb540b7c-d8d6-48f1-befc-14412a4292dd
-Taking next connection to: 53117
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53117
+New log file opened at Wed Jul 22 15:47:55 CEST 2015 by 18232@ISATVIEWW026
+Taking next connection to: 64956
+New client attempting to connect on port: 64957-64956
+  Address = /10.100.252.35:64956
+This client on port 64957 has uuid bd716b31-843e-4364-868b-dd2b3f7ae5d7 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-bd716b31-843e-4364-868b-dd2b3f7ae5d7
+Taking next connection to: 64956
