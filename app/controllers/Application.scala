@@ -1,6 +1,6 @@
 package controllers
 
-import models.Items
+import models._
 import play.api.mvc._
 import scala.collection.mutable.ListBuffer
 
@@ -12,61 +12,12 @@ object Application extends Controller {
   val sourceItemsets: Itemsets = Itemsets.fromEntireXml(rawXml)
   val sourceAssociationRules: AssociationRules = AssociationRules.fromEntireXml(rawXml)
 
-  class AssociationRule(val support: Double, val confidence: Double, val lift: Double, val antecedent: Int, val consequent: Int) {
-    override def toString =  s"AssociationRule ... support: $support, confidence: $confidence, lift: $lift, antecedent: $antecedent, consequent: $consequent"
-  }
-  object AssociationRule
-
-  class AssociationRules(val rules: Seq[AssociationRule]) {
-    override def toString = rules.map(sys.props("line.separator") + _.toString).toString
-    def getMatchingRules(itemsetIds: Seq[Int]):Seq[AssociationRule] = rules.filter(r => itemsetIds.contains(r.antecedent))
-    }
-
-  object AssociationRules {
-    def fromEntireXml(node: scala.xml.Node): AssociationRules = {
-      val associationRules = (node \\ "PMML" \\ "AssociationModel" \\ "AssociationRule")
-        .map(x => new AssociationRule(
-            (x \ "@support").toString.toDouble,
-            (x \ "@confidence").toString.toDouble,
-            (x \ "@lift").toString.toDouble,
-            (x \ "@antecedent").toString.toInt,
-            (x \ "@consequent").toString.toInt)
-        )
-      new AssociationRules(associationRules)
-    }
-  }
-
-  class Itemset(var id: Int, var itemIds: Seq[Int]) {
-    override def toString = s"id: $id, itemRefs:" + itemIds
-  }
-  object Itemset
-
-  class Itemsets(var itemsets: Seq[Itemset]){
-    override def toString = (for (is <- itemsets) yield sys.props("line.separator") + "ItemSetId:" + is.id + ": " + {
-      for(itemId <- is.itemIds) yield itemId.toString()
-    }).toString()
-
-    def getItemsetIds(itemIds: Seq[Int]):Seq[Int] = (itemsets.filter(_.itemIds == itemIds).map(_.id))
-    def getItemsetByItemsetId(itemsetId: Int):Itemset = itemsets.filter(_.id == itemsetId).head
-  }
-  object Itemsets {
-
-    // convert XML to an Item object
-    def fromEntireXml(node: scala.xml.Node):Itemsets = {
-      val itemsets = (node \\ "PMML" \\ "AssociationModel" \\ "Itemset" )
-        .map( x => new Itemset((x \\ "@id").toString.toInt,(x \\ "ItemRef").map(iref =>(iref \\ "@itemRef").toString().toInt)))
-      new Itemsets(itemsets)
-    }
-  }
-
+  def index = Action { Ok(views.html.main())  }
   def items = Action { Ok(sourceItems.toString)  }
   def itemsets = Action {  Ok(sourceItemsets.toString) }
   def rules = Action {  Ok(sourceAssociationRules.toString) }
 
-  def index = Action {
-    Ok(views.html.main())
-  }
-
+  //Validate parameter rank ... e.g. value 0
   def getNewSearch(terrasse: Boolean, balkon: Boolean, dachgeschoss: Boolean,garage: Boolean, lift: Boolean, rank: Option[Int]) = Action {
     //map parameters to item values/ids
     val input: ListBuffer[String] = ListBuffer()
@@ -74,8 +25,8 @@ object Application extends Controller {
     if (balkon) input += "Balkon=1"
     if (dachgeschoss) input += "Dachgeschoss=1"
     if (lift) input += "Lift=1"
-      input+="Preis_Bis_Cluster_1300-1800=1"
-        //<Item id="14" value="Preis_Bis_Cluster_von1800=1"/>
+    input += "Preis_Bis_Cluster_1300-1800=1"
+    //<Item id="14" value="Preis_Bis_Cluster_von1800=1"/>
 
     //find items and get there ids
     val itemIds = sourceItems.getItemIds(input)
@@ -85,23 +36,32 @@ object Application extends Controller {
 
     //find rules and get the consequent
     val matchingRules = sourceAssociationRules.getMatchingRules(itemsetIds)
-    if(matchingRules.length > 0) {
+
+    if (matchingRules.length > 0) {
       //choose the most suitable itemset/rule
       val sortedrules = matchingRules.sortBy(r => (r.lift, r.confidence, r.support))
 
-      val bestrule = if(rank == Option(null)) sortedrules.head else sortedrules(rank.get-1)
+      // Ok((rank != Option(null) && (sortedrules.length - rank.get - 1) > 0).toString)
 
-      val resultItemsetId = bestrule.consequent
+      if (rank != Option(null) && (sortedrules.length - rank.get ) < 0) {
+        Ok("Sorry FAT LIP")
+        //Ok(((sortedrules.length - rank.get - 1) >0).toString)
+      }
+      else {
+        val bestrule = if(rank == Option(null)) sortedrules.head else sortedrules(rank.get-1)
 
-      //get itemset by itemsetId
-      val resultItemset: Itemset = sourceItemsets.getItemsetByItemsetId(resultItemsetId)
+        val resultItemsetId = bestrule.consequent
 
-      //get item values
-      val values = sourceItems.getItemValues(resultItemset.itemIds)
+        //get itemset by itemsetId
+        val resultItemset: Itemset = sourceItemsets.getItemsetByItemsetId(resultItemsetId)
 
-      Ok(values.toString)
+        //get item values
+        val values = sourceItems.getItemValues(resultItemset.itemIds)
+
+        Ok(values.toString)
+       }
+     }
+     else
+       Ok("Sorry, there are no matching rules!")
     }
-    else
-      Ok("Sorry, there are no matching rules!")
-  }
 }
