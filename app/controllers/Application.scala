@@ -4,10 +4,11 @@ import models._
 import play.api.mvc._
 import scala.collection.mutable.ListBuffer
 
+
 object Application extends Controller {
-  //val sourceXml : String = new java.io.File(".").getCanonicalPath() + "/app/assets/Rules.xml"  //"C:/github/just-play-scala/app/assets/Rules.xml"
   val sourceXml : String = "public/Rules.xml"  //"C:/github/just-play-scala/app/assets/Rules.xml"
-  val rawXml = scala.xml.XML.loadFile(sourceXml)
+  val url ="https://recoservice.blob.core.windows.net/recocontainer/Rules.xml"
+  val rawXml =scala.xml.XML.load(url)
   val sourceItems: Items = Items.fromEntireXml(rawXml)
   val sourceItemsets: Itemsets = Itemsets.fromEntireXml(rawXml)
   val sourceAssociationRules: AssociationRules = AssociationRules.fromEntireXml(rawXml)
